@@ -1,0 +1,2460 @@
+<pre><font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ echo &quot;# git_demo&quot; &gt;&gt; README.md
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ ls
+README.md
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ cat README.md 
+# git_demo
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git init
+<font color="#A2734C">hint: Using &apos;master&apos; as the name for the initial branch. This default branch name</font>
+<font color="#A2734C">hint: is subject to change. To configure the initial branch name to use in all</font>
+<font color="#A2734C">hint: of your new repositories, which will suppress this warning, call:</font>
+<font color="#A2734C">hint: </font>
+<font color="#A2734C">hint: </font>	<font color="#A2734C">git config --global init.defaultBranch &lt;name&gt;</font>
+<font color="#A2734C">hint: </font>
+<font color="#A2734C">hint: Names commonly chosen instead of &apos;master&apos; are &apos;main&apos;, &apos;trunk&apos; and</font>
+<font color="#A2734C">hint: &apos;development&apos;. The just-created branch can be renamed via this command:</font>
+<font color="#A2734C">hint: </font>
+<font color="#A2734C">hint: </font>	<font color="#A2734C">git branch -m &lt;name&gt;</font>
+Initialized empty Git repository in /home/shubham/git_demo/.git/
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add README.md 
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;first commit&quot;
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email &quot;you@example.com&quot;
+  git config --global user.name &quot;Your Name&quot;
+
+to set your account&apos;s default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got &apos;shubham@sf-cpu-313.(none)&apos;)
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+fatal: your current branch &apos;master&apos; does not have any commits yet
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git config user.email &quot;shubham.p@simformsolutions.com&quot;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git config user.name &quot;Shubham Pokar&quot;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;first commit&quot;
+[master (root-commit) 1a7c134] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit 1a7c134271829322506c0bffe970e07e365f751e (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>master</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 11:51:36 2023 +0530
+
+    first commit
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch master
+nothing to commit, working tree clean
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git branch -M main
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+nothing to commit, working tree clean
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git remote add origin https://github.com/shubhampokar/git_demo.git
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push -u origin main
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for &apos;https://github.com/shubhampokar/git_demo.git/&apos;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push -u origin main
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+remote: Permission to shubhampokar/git_demo.git denied to shubhampokar.
+fatal: unable to access &apos;https://github.com/shubhampokar/git_demo.git/&apos;: The requested URL returned error: 403
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+nothing to commit, working tree clean
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit 1a7c134271829322506c0bffe970e07e365f751e (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 11:51:36 2023 +0530
+
+    first commit
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push -u origin main
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+remote: Permission to shubhampokar/git_demo.git denied to shubhampokar.
+fatal: unable to access &apos;https://github.com/shubhampokar/git_demo.git/&apos;: The requested URL returned error: 403
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push -u origin main
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for &apos;https://github.com/shubhampokar/git_demo.git/&apos;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push -u origin main
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+remote: Permission to shubhampokar/git_demo.git denied to shubhampokar.
+fatal: unable to access &apos;https://github.com/shubhampokar/git_demo.git/&apos;: The requested URL returned error: 403
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push -u origin main
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+remote: Permission to shubhampokar/git_demo.git denied to shubhampokar.
+fatal: unable to access &apos;https://github.com/shubhampokar/git_demo.git/&apos;: The requested URL returned error: 403
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push -u origin main
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 232 bytes | 232.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/shubhampokar/git_demo.git
+ * [new branch]      main -&gt; main
+Branch &apos;main&apos; set up to track remote branch &apos;main&apos; from &apos;origin&apos;.
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ touch new.txt
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is up to date with &apos;origin/main&apos;.
+
+Changes to be committed:
+  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+	<font color="#26A269">new file:   .gitignore</font>
+	<font color="#26A269">new file:   new.txt</font>
+	<font color="#26A269">new file:   test.txt</font>
+
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git reset
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is up to date with &apos;origin/main&apos;.
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+	<font color="#C01C28">.gitignore</font>
+	<font color="#C01C28">new.txt</font>
+	<font color="#C01C28">test.txt</font>
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add *.txt
+The following paths are ignored by one of your .gitignore files:
+private.txt
+<font color="#A2734C">hint: Use -f if you really want to add them.</font>
+<font color="#A2734C">hint: Turn this message off by running</font>
+<font color="#A2734C">hint: &quot;git config advice.addIgnoredFile false&quot;</font>
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is up to date with &apos;origin/main&apos;.
+
+Changes to be committed:
+  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+	<font color="#26A269">new file:   new.txt</font>
+	<font color="#26A269">new file:   test.txt</font>
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+	<font color="#C01C28">.gitignore</font>
+
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;new.txt and test.txt file added&quot;
+[main 7032267] new.txt and test.txt file added
+ 2 files changed, 1 insertion(+)
+ create mode 100644 new.txt
+ create mode 100644 test.txt
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;gitignore file created and added&quot;
+[main fc9f70e] gitignore file created and added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is ahead of &apos;origin/main&apos; by 2 commits.
+  (use &quot;git push&quot; to publish your local commits)
+
+nothing to commit, working tree clean
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit fc9f70eb46364490457e189a40020a256100a512 (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:35 2023 +0530
+
+    gitignore file created and added
+
+<font color="#A2734C">commit 70322670a702ff8205586abcabaed737d720ed09</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:00 2023 +0530
+
+    new.txt and test.txt file added
+
+<font color="#A2734C">commit 1a7c134271829322506c0bffe970e07e365f751e (</font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 11:51:36 2023 +0530
+
+    first commit
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push origin main
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 597 bytes | 298.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/shubhampokar/git_demo.git
+   1a7c134..fc9f70e  main -&gt; main
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is up to date with &apos;origin/main&apos;.
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+	<font color="#C01C28">1</font>
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;1 added&quot;
+[main 8b90259] 1 added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ touch 2
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;2 added&quot;
+[main 51a23ff] 2 added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is ahead of &apos;origin/main&apos; by 2 commits.
+  (use &quot;git push&quot; to publish your local commits)
+
+nothing to commit, working tree clean
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit 51a23ffcd1ea08d046ccc5d1a3232aeee6fc4c8a (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:34:50 2023 +0530
+
+    2 added
+
+<font color="#A2734C">commit 8b902591a16beaecdc32d5d81df0cf3124f94f8d</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:34:29 2023 +0530
+
+    1 added
+
+<font color="#A2734C">commit fc9f70eb46364490457e189a40020a256100a512 (</font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:35 2023 +0530
+
+    gitignore file created and added
+
+<font color="#A2734C">commit 70322670a702ff8205586abcabaed737d720ed09</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:00 2023 +0530
+
+    new.txt and test.txt file added
+
+<font color="#A2734C">commit 1a7c134271829322506c0bffe970e07e365f751e</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 11:51:36 2023 +0530
+
+    first commit
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ ^C
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git reset fc9f70eb46364490457e189a40020a256100a512
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit fc9f70eb46364490457e189a40020a256100a512 (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>main</b></font><font color="#A2734C">, </font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:35 2023 +0530
+
+    gitignore file created and added
+
+<font color="#A2734C">commit 70322670a702ff8205586abcabaed737d720ed09</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:00 2023 +0530
+
+    new.txt and test.txt file added
+
+<font color="#A2734C">commit 1a7c134271829322506c0bffe970e07e365f751e</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 11:51:36 2023 +0530
+
+    first commit
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is up to date with &apos;origin/main&apos;.
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+	<font color="#C01C28">1</font>
+	<font color="#C01C28">2</font>
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git stash
+No local changes to save
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git stash
+Saved working directory and index state WIP on main: fc9f70e gitignore file created and added
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is up to date with &apos;origin/main&apos;.
+
+nothing to commit, working tree clean
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ cd
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~</b></font>$ cd git_demo/
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ ls
+new.txt  private.txt  README.md  test.txt
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ delete test.txt
+delete: command not found
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ rm test.txt
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ ls
+new.txt  private.txt  README.md
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is up to date with &apos;origin/main&apos;.
+
+Changes not staged for commit:
+  (use &quot;git add/rm &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+	<font color="#C01C28">deleted:    test.txt</font>
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;deleted test.txt&quot;
+[main 3c0eff6] deleted test.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 test.txt
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git stash pop
+On branch main
+Your branch is ahead of &apos;origin/main&apos; by 1 commit.
+  (use &quot;git push&quot; to publish your local commits)
+
+Changes to be committed:
+  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+	<font color="#26A269">new file:   1</font>
+	<font color="#26A269">new file:   2</font>
+
+Dropped refs/stash@{0} (ac768d2167c5b017a5735aede6f065253d5114b4)
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ ls
+1  2  new.txt  private.txt  README.md
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit 3c0eff6aef18eb62cc175755ec593909f4fe86e1 (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:39:32 2023 +0530
+
+    deleted test.txt
+
+<font color="#A2734C">commit fc9f70eb46364490457e189a40020a256100a512 (</font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:35 2023 +0530
+
+    gitignore file created and added
+
+<font color="#A2734C">commit 70322670a702ff8205586abcabaed737d720ed09</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:00 2023 +0530
+
+    new.txt and test.txt file added
+
+<font color="#A2734C">commit 1a7c134271829322506c0bffe970e07e365f751e</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 11:51:36 2023 +0530
+
+    first commit
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ ^C
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git reset fc9f70eb46364490457e189a40020a256100a512
+Unstaged changes after reset:
+D	test.txt
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ ls
+1  2  new.txt  private.txt  README.md
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is up to date with &apos;origin/main&apos;.
+
+Changes not staged for commit:
+  (use &quot;git add/rm &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+	<font color="#C01C28">deleted:    test.txt</font>
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+	<font color="#C01C28">1</font>
+	<font color="#C01C28">2</font>
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git stash
+Saved working directory and index state WIP on main: fc9f70e gitignore file created and added
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git stash clear
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is up to date with &apos;origin/main&apos;.
+
+nothing to commit, working tree clean
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit fc9f70eb46364490457e189a40020a256100a512 (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>main</b></font><font color="#A2734C">, </font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:35 2023 +0530
+
+    gitignore file created and added
+
+<font color="#A2734C">commit 70322670a702ff8205586abcabaed737d720ed09</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:00 2023 +0530
+
+    new.txt and test.txt file added
+
+<font color="#A2734C">commit 1a7c134271829322506c0bffe970e07e365f751e</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 11:51:36 2023 +0530
+
+    first commit
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ rm test.txt 
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;tt&quot;
+[main f1a98dc] tt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 test.txt
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit f1a98dc8a583e7c6539922ffdf544123a2ee057c (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:44:15 2023 +0530
+
+    tt
+
+<font color="#A2734C">commit fc9f70eb46364490457e189a40020a256100a512 (</font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:35 2023 +0530
+
+    gitignore file created and added
+
+<font color="#A2734C">commit 70322670a702ff8205586abcabaed737d720ed09</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:00 2023 +0530
+
+    new.txt and test.txt file added
+
+<font color="#A2734C">commit 1a7c134271829322506c0bffe970e07e365f751e</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 11:51:36 2023 +0530
+
+    first commit
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ ^C
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git reset fc9f70eb46364490457e189a40020a256100a512
+Unstaged changes after reset:
+D	test.txt
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ ls
+new.txt  private.txt  README.md
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git stash
+Saved working directory and index state WIP on main: fc9f70e gitignore file created and added
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ ls
+new.txt  private.txt  README.md  test.txt
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ rm test.txt 
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;tt&quot;
+[main b2b7960] tt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 test.txt
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git reset fc9f70eb46364490457e189a40020a256100a512
+Unstaged changes after reset:
+D	test.txt
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ ls
+new.txt  private.txt  README.md
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is up to date with &apos;origin/main&apos;.
+
+Changes not staged for commit:
+  (use &quot;git add/rm &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+	<font color="#C01C28">deleted:    test.txt</font>
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git stash
+Saved working directory and index state WIP on main: fc9f70e gitignore file created and added
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git stash pop
+Removing test.txt
+On branch main
+Your branch is up to date with &apos;origin/main&apos;.
+
+Changes not staged for commit:
+  (use &quot;git add/rm &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+	<font color="#C01C28">deleted:    test.txt</font>
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+Dropped refs/stash@{0} (9699c61128c34a404c9f8f8a78d3ba06578548fc)
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git stash
+Saved working directory and index state WIP on main: fc9f70e gitignore file created and added
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git stash clear\
+&gt; ^C
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git stash clear
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ touch 1
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;1 added&quot;
+[main 70233a5] 1 added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ touch 2
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;2 added&quot;
+[main e314d7d] 2 added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git reset fc9f70eb46364490457e189a40020a256100a512
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is up to date with &apos;origin/main&apos;.
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+	<font color="#C01C28">1</font>
+	<font color="#C01C28">2</font>
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add remove.txt
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;remove.txt added&quot;
+[main 31c406f] remove.txt added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 remove.txt
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is ahead of &apos;origin/main&apos; by 1 commit.
+  (use &quot;git push&quot; to publish your local commits)
+
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+	<font color="#C01C28">modified:   remove.txt</font>
+	<font color="#C01C28">modified:   test.txt</font>
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+	<font color="#C01C28">1</font>
+	<font color="#C01C28">2</font>
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git stash
+Saved working directory and index state WIP on main: 31c406f remove.txt added
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ rm remove.txt 
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+\<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ ^C
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;exp 2&quot;
+[main 9c1242e] exp 2
+ 2 files changed, 1 insertion(+)
+ delete mode 100644 remove.txt
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git stash pop
+Auto-merging test.txt
+CONFLICT (content): Merge conflict in test.txt
+CONFLICT (modify/delete): remove.txt deleted in Updated upstream and modified in Stashed changes. Version Stashed changes of remove.txt left in tree.
+The stash entry is kept in case you need it again.
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is ahead of &apos;origin/main&apos; by 2 commits.
+  (use &quot;git push&quot; to publish your local commits)
+
+Changes to be committed:
+  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+	<font color="#26A269">new file:   1</font>
+	<font color="#26A269">new file:   2</font>
+
+Unmerged paths:
+  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+  (use &quot;git add/rm &lt;file&gt;...&quot; as appropriate to mark resolution)
+	<font color="#C01C28">deleted by us:   remove.txt</font>
+	<font color="#C01C28">both modified:   test.txt</font>
+
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is ahead of &apos;origin/main&apos; by 3 commits.
+  (use &quot;git push&quot; to publish your local commits)
+
+nothing to commit, working tree clean
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit 51813da5ec8f120c42a80df6d03be5adf19f93e0 (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:55:44 2023 +0530
+
+    both stash and current kept for text, acceted stash for remove
+
+<font color="#A2734C">commit 9c1242e9dd26a78a0fd5c8912e08d1331d602ec5</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:51:02 2023 +0530
+
+    exp 2
+
+<font color="#A2734C">commit 31c406f6b61d07c1abd1504fa264e1f54375522e</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:48:54 2023 +0530
+
+    remove.txt added
+
+<font color="#A2734C">commit fc9f70eb46364490457e189a40020a256100a512 (</font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:35 2023 +0530
+
+    gitignore file created and added
+
+<font color="#A2734C">commit 70322670a702ff8205586abcabaed737d720ed09</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:00 2023 +0530
+
+    new.txt and test.txt file added
+
+<font color="#A2734C">commit 1a7c134271829322506c0bffe970e07e365f751e</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 11:51:36 2023 +0530
+
+    first commit
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push origin main
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for &apos;https://github.com/shubhampokar/git_demo.git/&apos;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git pull origin main
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 692 bytes | 692.00 KiB/s, done.
+From https://github.com/shubhampokar/git_demo
+ * branch            main       -&gt; FETCH_HEAD
+   fc9f70e..50fdf98  main       -&gt; origin/main
+<font color="#A2734C">hint: You have divergent branches and need to specify how to reconcile them.</font>
+<font color="#A2734C">hint: You can do so by running one of the following commands sometime before</font>
+<font color="#A2734C">hint: your next pull:</font>
+<font color="#A2734C">hint: </font>
+<font color="#A2734C">hint:   git config pull.rebase false  # merge (the default strategy)</font>
+<font color="#A2734C">hint:   git config pull.rebase true   # rebase</font>
+<font color="#A2734C">hint:   git config pull.ff only       # fast-forward only</font>
+<font color="#A2734C">hint: </font>
+<font color="#A2734C">hint: You can replace &quot;git config&quot; with &quot;git config --global&quot; to set a default</font>
+<font color="#A2734C">hint: preference for all repositories. You can also pass --rebase, --no-rebase,</font>
+<font color="#A2734C">hint: or --ff-only on the command line to override the configured default per</font>
+<font color="#A2734C">hint: invocation.</font>
+fatal: Need to specify how to reconcile divergent branches.
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push origin main
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for &apos;https://github.com/shubhampokar/git_demo.git/&apos;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push origin main
+Username for &apos;https://github.com&apos;: shubhampokar         
+Password for &apos;https://shubhampokar@github.com&apos;: 
+To https://github.com/shubhampokar/git_demo.git
+ <font color="#C01C28">! [rejected]       </font> main -&gt; main (non-fast-forward)
+<font color="#C01C28">error: failed to push some refs to &apos;https://github.com/shubhampokar/git_demo.git&apos;</font>
+<font color="#A2734C">hint: Updates were rejected because the tip of your current branch is behind</font>
+<font color="#A2734C">hint: its remote counterpart. Integrate the remote changes (e.g.</font>
+<font color="#A2734C">hint: &apos;git pull ...&apos;) before pushing again.</font>
+<font color="#A2734C">hint: See the &apos;Note about fast-forwards&apos; in &apos;git push --help&apos; for details.</font>
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch and &apos;origin/main&apos; have diverged,
+and have 3 and 1 different commits each, respectively.
+  (use &quot;git pull&quot; to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git pull origin main
+From https://github.com/shubhampokar/git_demo
+ * branch            main       -&gt; FETCH_HEAD
+<font color="#A2734C">hint: You have divergent branches and need to specify how to reconcile them.</font>
+<font color="#A2734C">hint: You can do so by running one of the following commands sometime before</font>
+<font color="#A2734C">hint: your next pull:</font>
+<font color="#A2734C">hint: </font>
+<font color="#A2734C">hint:   git config pull.rebase false  # merge (the default strategy)</font>
+<font color="#A2734C">hint:   git config pull.rebase true   # rebase</font>
+<font color="#A2734C">hint:   git config pull.ff only       # fast-forward only</font>
+<font color="#A2734C">hint: </font>
+<font color="#A2734C">hint: You can replace &quot;git config&quot; with &quot;git config --global&quot; to set a default</font>
+<font color="#A2734C">hint: preference for all repositories. You can also pass --rebase, --no-rebase,</font>
+<font color="#A2734C">hint: or --ff-only on the command line to override the configured default per</font>
+<font color="#A2734C">hint: invocation.</font>
+fatal: Need to specify how to reconcile divergent branches.
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git config pull.rebase true
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git pull origin main
+From https://github.com/shubhampokar/git_demo
+ * branch            main       -&gt; FETCH_HEAD
+Successfully rebased and updated refs/heads/main.
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git config pull.rebase false
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is ahead of &apos;origin/main&apos; by 3 commits.
+  (use &quot;git push&quot; to publish your local commits)
+
+nothing to commit, working tree clean
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit 766bf42fcf77cdb6c9e3593f845841a755e57b6e (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:55:44 2023 +0530
+
+    both stash and current kept for text, acceted stash for remove
+
+<font color="#A2734C">commit 294a0af590660bb573ef3d1917cf7a57547f7fcb</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:51:02 2023 +0530
+
+    exp 2
+
+<font color="#A2734C">commit 34fa7fdbc9d7433b43bb3a13c99ca3267eae00e2</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:48:54 2023 +0530
+
+    remove.txt added
+
+<font color="#A2734C">commit 50fdf9869669b415a05cf9b4cb1771c79513b920 (</font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">)</font>
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 13:58:04 2023 +0530
+
+    Create gituhb_file.txt
+
+<font color="#A2734C">commit fc9f70eb46364490457e189a40020a256100a512</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:35 2023 +0530
+
+    gitignore file created and added
+
+<font color="#A2734C">commit 70322670a702ff8205586abcabaed737d720ed09</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:00 2023 +0530
+
+    new.txt and test.txt file added
+
+<font color="#A2734C">commit 1a7c134271829322506c0bffe970e07e365f751e</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 11:51:36 2023 +0530
+
+    first commit
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 983 bytes | 491.00 KiB/s, done.
+Total 9 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/shubhampokar/git_demo.git
+   50fdf98..766bf42  main -&gt; main
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit 766bf42fcf77cdb6c9e3593f845841a755e57b6e (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>main</b></font><font color="#A2734C">, </font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:55:44 2023 +0530
+
+    both stash and current kept for text, acceted stash for remove
+
+<font color="#A2734C">commit 294a0af590660bb573ef3d1917cf7a57547f7fcb</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:51:02 2023 +0530
+
+    exp 2
+
+<font color="#A2734C">commit 34fa7fdbc9d7433b43bb3a13c99ca3267eae00e2</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:48:54 2023 +0530
+
+    remove.txt added
+
+<font color="#A2734C">commit 50fdf9869669b415a05cf9b4cb1771c79513b920</font>
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 13:58:04 2023 +0530
+
+    Create gituhb_file.txt
+
+<font color="#A2734C">commit fc9f70eb46364490457e189a40020a256100a512</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:35 2023 +0530
+
+    gitignore file created and added
+
+<font color="#A2734C">commit 70322670a702ff8205586abcabaed737d720ed09</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:00 2023 +0530
+
+    new.txt and test.txt file added
+
+<font color="#A2734C">commit 1a7c134271829322506c0bffe970e07e365f751e</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 11:51:36 2023 +0530
+
+    first commit
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git remote -v
+origin	https://github.com/shubhampokar/git_demo.git (fetch)
+origin	https://github.com/shubhampokar/git_demo.git (push)
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git branch testb
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout testb 
+Switched to branch &apos;testb&apos;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch testb
+nothing to commit, working tree clean
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit 766bf42fcf77cdb6c9e3593f845841a755e57b6e (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>testb</b></font><font color="#A2734C">, </font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">, </font><font color="#26A269"><b>main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:55:44 2023 +0530
+
+    both stash and current kept for text, acceted stash for remove
+
+<font color="#A2734C">commit 294a0af590660bb573ef3d1917cf7a57547f7fcb</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:51:02 2023 +0530
+
+    exp 2
+
+<font color="#A2734C">commit 34fa7fdbc9d7433b43bb3a13c99ca3267eae00e2</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:48:54 2023 +0530
+
+    remove.txt added
+
+<font color="#A2734C">commit 50fdf9869669b415a05cf9b4cb1771c79513b920</font>
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 13:58:04 2023 +0530
+
+    Create gituhb_file.txt
+
+<font color="#A2734C">commit fc9f70eb46364490457e189a40020a256100a512</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:35 2023 +0530
+
+    gitignore file created and added
+
+<font color="#A2734C">commit 70322670a702ff8205586abcabaed737d720ed09</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:00 2023 +0530
+
+    new.txt and test.txt file added
+
+<font color="#A2734C">commit 1a7c134271829322506c0bffe970e07e365f751e</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 11:51:36 2023 +0530
+
+    first commit
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ touch 789
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;added 789 in testb branch&quot;
+[testb 80b48a1] added 789 in testb branch
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 789
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch testb
+nothing to commit, working tree clean
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit 80b48a1847b561aaf150512c4fba0ffeca3af3cc (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>testb</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 14:54:27 2023 +0530
+
+    added 789 in testb branch
+
+<font color="#A2734C">commit 766bf42fcf77cdb6c9e3593f845841a755e57b6e (</font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">, </font><font color="#26A269"><b>main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:55:44 2023 +0530
+
+    both stash and current kept for text, acceted stash for remove
+
+<font color="#A2734C">commit 294a0af590660bb573ef3d1917cf7a57547f7fcb</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:51:02 2023 +0530
+
+    exp 2
+
+<font color="#A2734C">commit 34fa7fdbc9d7433b43bb3a13c99ca3267eae00e2</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:48:54 2023 +0530
+
+    remove.txt added
+
+<font color="#A2734C">commit 50fdf9869669b415a05cf9b4cb1771c79513b920</font>
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 13:58:04 2023 +0530
+
+    Create gituhb_file.txt
+
+<font color="#A2734C">commit fc9f70eb46364490457e189a40020a256100a512</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:35 2023 +0530
+
+    gitignore file created and added
+
+<font color="#A2734C">commit 70322670a702ff8205586abcabaed737d720ed09</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:00 2023 +0530
+
+    new.txt and test.txt file added
+
+<font color="#A2734C">commit 1a7c134271829322506c0bffe970e07e365f751e</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 11:51:36 2023 +0530
+
+    first commit
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout main 
+Switched to branch &apos;main&apos;
+Your branch is up to date with &apos;origin/main&apos;.
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is up to date with &apos;origin/main&apos;.
+
+nothing to commit, working tree clean
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit 766bf42fcf77cdb6c9e3593f845841a755e57b6e (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>main</b></font><font color="#A2734C">, </font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:55:44 2023 +0530
+
+    both stash and current kept for text, acceted stash for remove
+
+<font color="#A2734C">commit 294a0af590660bb573ef3d1917cf7a57547f7fcb</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:51:02 2023 +0530
+
+    exp 2
+
+<font color="#A2734C">commit 34fa7fdbc9d7433b43bb3a13c99ca3267eae00e2</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:48:54 2023 +0530
+
+    remove.txt added
+
+<font color="#A2734C">commit 50fdf9869669b415a05cf9b4cb1771c79513b920</font>
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 13:58:04 2023 +0530
+
+    Create gituhb_file.txt
+
+<font color="#A2734C">commit fc9f70eb46364490457e189a40020a256100a512</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:35 2023 +0530
+
+    gitignore file created and added
+
+<font color="#A2734C">commit 70322670a702ff8205586abcabaed737d720ed09</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:00 2023 +0530
+
+    new.txt and test.txt file added
+
+<font color="#A2734C">commit 1a7c134271829322506c0bffe970e07e365f751e</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 11:51:36 2023 +0530
+
+    first commit
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout testb 
+Switched to branch &apos;testb&apos;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git remote -v
+origin	https://github.com/shubhampokar/git_demo.git (fetch)
+origin	https://github.com/shubhampokar/git_demo.git (push)
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit 80b48a1847b561aaf150512c4fba0ffeca3af3cc (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>testb</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 14:54:27 2023 +0530
+
+    added 789 in testb branch
+
+<font color="#A2734C">commit 766bf42fcf77cdb6c9e3593f845841a755e57b6e (</font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">, </font><font color="#26A269"><b>main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:55:44 2023 +0530
+
+    both stash and current kept for text, acceted stash for remove
+
+<font color="#A2734C">commit 294a0af590660bb573ef3d1917cf7a57547f7fcb</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:51:02 2023 +0530
+
+    exp 2
+
+<font color="#A2734C">commit 34fa7fdbc9d7433b43bb3a13c99ca3267eae00e2</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:48:54 2023 +0530
+
+    remove.txt added
+
+<font color="#A2734C">commit 50fdf9869669b415a05cf9b4cb1771c79513b920</font>
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 13:58:04 2023 +0530
+
+    Create gituhb_file.txt
+
+<font color="#A2734C">commit fc9f70eb46364490457e189a40020a256100a512</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:35 2023 +0530
+
+    gitignore file created and added
+
+<font color="#A2734C">commit 70322670a702ff8205586abcabaed737d720ed09</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:00 2023 +0530
+
+    new.txt and test.txt file added
+
+<font color="#A2734C">commit 1a7c134271829322506c0bffe970e07e365f751e</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 11:51:36 2023 +0530
+
+    first commit
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout main 
+Switched to branch &apos;main&apos;
+Your branch is up to date with &apos;origin/main&apos;.
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push origin main
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+Everything up-to-date
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push origin testb 
+Username for &apos;https://github.com&apos;: shubhamopkar
+Password for &apos;https://shubhamopkar@github.com&apos;: 
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push origin testb 
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 251 bytes | 251.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for &apos;testb&apos; on GitHub by visiting:
+remote:      https://github.com/shubhampokar/git_demo/pull/new/testb
+remote: 
+To https://github.com/shubhampokar/git_demo.git
+ * [new branch]      testb -&gt; testb
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ touch 123
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is up to date with &apos;origin/main&apos;.
+
+Changes to be committed:
+  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+	<font color="#26A269">new file:   123</font>
+
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;123 created in main branch&quot;
+[main eccda2f] 123 created in main branch
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 123
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout testb 
+Switched to branch &apos;testb&apos;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ touch 456
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;456 created in testb branch&quot;
+[testb e3667f6] 456 created in testb branch
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 456
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push origin testb 
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 251 bytes | 251.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/shubhampokar/git_demo.git
+   80b48a1..e3667f6  testb -&gt; testb
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push origin main
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 245 bytes | 245.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/shubhampokar/git_demo.git
+   766bf42..eccda2f  main -&gt; main
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout testb 
+Already on &apos;testb&apos;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git pull origin main
+From https://github.com/shubhampokar/git_demo
+ * branch            main       -&gt; FETCH_HEAD
+Merge made by the &apos;ort&apos; strategy.
+ 123 | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 123
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit 574bd03e06948f4e91de9f8f022a7613c7495113 (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>testb</b></font><font color="#A2734C">)</font>
+Merge: e3667f6 eccda2f
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:06:01 2023 +0530
+
+    Merge branch &apos;main&apos; of https://github.com/shubhampokar/git_demo into testb
+
+<font color="#A2734C">commit e3667f6470b51d05488dac8e4591d509eebbbc6c (</font><font color="#C01C28"><b>origin/testb</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:04:01 2023 +0530
+
+    456 created in testb branch
+
+<font color="#A2734C">commit eccda2f8a3456a0ceddfdc126a1207536daccff6 (</font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">, </font><font color="#26A269"><b>main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:03:22 2023 +0530
+
+    123 created in main branch
+
+<font color="#A2734C">commit 80b48a1847b561aaf150512c4fba0ffeca3af3cc</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 14:54:27 2023 +0530
+
+    added 789 in testb branch
+
+<font color="#A2734C">commit 766bf42fcf77cdb6c9e3593f845841a755e57b6e</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:55:44 2023 +0530
+
+    both stash and current kept for text, acceted stash for remove
+
+<font color="#A2734C">commit 294a0af590660bb573ef3d1917cf7a57547f7fcb</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:51:02 2023 +0530
+
+    exp 2
+
+<font color="#A2734C">commit 34fa7fdbc9d7433b43bb3a13c99ca3267eae00e2</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:48:54 2023 +0530
+
+    remove.txt added
+
+<font color="#A2734C">commit 50fdf9869669b415a05cf9b4cb1771c79513b920</font>
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 13:58:04 2023 +0530
+
+    Create gituhb_file.txt
+
+<font color="#A2734C">commit fc9f70eb46364490457e189a40020a256100a512</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:29:35 2023 +0530
+
+    gitignore file created and added
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch testb
+nothing to commit, working tree clean
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push origin testb 
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 318 bytes | 318.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/shubhampokar/git_demo.git
+   e3667f6..574bd03  testb -&gt; testb
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout main
+Switched to branch &apos;main&apos;
+Your branch is up to date with &apos;origin/main&apos;.
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout testb 
+Switched to branch &apos;testb&apos;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout main
+Switched to branch &apos;main&apos;
+Your branch is up to date with &apos;origin/main&apos;.
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git pull origin main
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 622 bytes | 622.00 KiB/s, done.
+From https://github.com/shubhampokar/git_demo
+ * branch            main       -&gt; FETCH_HEAD
+   eccda2f..8cffd53  main       -&gt; origin/main
+Updating eccda2f..8cffd53
+Fast-forward
+ 456 | 0
+ 789 | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 456
+ create mode 100644 789
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout main branch
+error: pathspec &apos;branch&apos; did not match any file(s) known to git
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout main
+Already on &apos;main&apos;
+Your branch is up to date with &apos;origin/main&apos;.
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ touch mergemain
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;mergemain created in main&quot;
+[main 9a3ec60] mergemain created in main
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 mergemain
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is ahead of &apos;origin/main&apos; by 1 commit.
+  (use &quot;git push&quot; to publish your local commits)
+
+nothing to commit, working tree clean
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit 9a3ec60a0ad769056d579ff3245906d36f339a50 (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:22:25 2023 +0530
+
+    mergemain created in main
+
+<font color="#A2734C">commit 8cffd5393926e6e30bd2caf03d8f2cf917026be7 (</font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">)</font>
+Merge: eccda2f 574bd03
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 15:12:39 2023 +0530
+
+    Merge pull request #1 from shubhampokar/testb
+    
+    Testb
+
+<font color="#A2734C">commit 574bd03e06948f4e91de9f8f022a7613c7495113 (</font><font color="#C01C28"><b>origin/testb</b></font><font color="#A2734C">, </font><font color="#26A269"><b>testb</b></font><font color="#A2734C">)</font>
+Merge: e3667f6 eccda2f
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:06:01 2023 +0530
+
+    Merge branch &apos;main&apos; of https://github.com/shubhampokar/git_demo into testb
+
+<font color="#A2734C">commit e3667f6470b51d05488dac8e4591d509eebbbc6c</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:04:01 2023 +0530
+
+    456 created in testb branch
+
+<font color="#A2734C">commit eccda2f8a3456a0ceddfdc126a1207536daccff6</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:03:22 2023 +0530
+
+    123 created in main branch
+
+<font color="#A2734C">commit 80b48a1847b561aaf150512c4fba0ffeca3af3cc</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 14:54:27 2023 +0530
+
+    added 789 in testb branch
+
+<font color="#A2734C">commit 766bf42fcf77cdb6c9e3593f845841a755e57b6e</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:55:44 2023 +0530
+
+    both stash and current kept for text, acceted stash for remove
+
+<font color="#A2734C">commit 294a0af590660bb573ef3d1917cf7a57547f7fcb</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:51:02 2023 +0530
+
+    exp 2
+
+<font color="#A2734C">commit 34fa7fdbc9d7433b43bb3a13c99ca3267eae00e2</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout testb 
+Switched to branch &apos;testb&apos;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git pull origin main
+From https://github.com/shubhampokar/git_demo
+ * branch            main       -&gt; FETCH_HEAD
+Updating 574bd03..8cffd53
+Fast-forward
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch testb
+nothing to commit, working tree clean
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout main
+Switched to branch &apos;main&apos;
+Your branch is ahead of &apos;origin/main&apos; by 1 commit.
+  (use &quot;git push&quot; to publish your local commits)
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit 9a3ec60a0ad769056d579ff3245906d36f339a50 (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:22:25 2023 +0530
+
+    mergemain created in main
+
+<font color="#A2734C">commit 8cffd5393926e6e30bd2caf03d8f2cf917026be7 (</font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">, </font><font color="#26A269"><b>testb</b></font><font color="#A2734C">)</font>
+Merge: eccda2f 574bd03
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 15:12:39 2023 +0530
+
+    Merge pull request #1 from shubhampokar/testb
+    
+    Testb
+
+<font color="#A2734C">commit 574bd03e06948f4e91de9f8f022a7613c7495113 (</font><font color="#C01C28"><b>origin/testb</b></font><font color="#A2734C">)</font>
+Merge: e3667f6 eccda2f
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:06:01 2023 +0530
+
+    Merge branch &apos;main&apos; of https://github.com/shubhampokar/git_demo into testb
+
+<font color="#A2734C">commit e3667f6470b51d05488dac8e4591d509eebbbc6c</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:04:01 2023 +0530
+
+    456 created in testb branch
+
+<font color="#A2734C">commit eccda2f8a3456a0ceddfdc126a1207536daccff6</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:03:22 2023 +0530
+
+    123 created in main branch
+
+<font color="#A2734C">commit 80b48a1847b561aaf150512c4fba0ffeca3af3cc</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 14:54:27 2023 +0530
+
+    added 789 in testb branch
+
+<font color="#A2734C">commit 766bf42fcf77cdb6c9e3593f845841a755e57b6e</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:55:44 2023 +0530
+
+    both stash and current kept for text, acceted stash for remove
+
+<font color="#A2734C">commit 294a0af590660bb573ef3d1917cf7a57547f7fcb</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:51:02 2023 +0530
+
+    exp 2
+
+<font color="#A2734C">commit 34fa7fdbc9d7433b43bb3a13c99ca3267eae00e2</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout testb 
+Switched to branch &apos;testb&apos;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch testb
+nothing to commit, working tree clean
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit 8cffd5393926e6e30bd2caf03d8f2cf917026be7 (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>testb</b></font><font color="#A2734C">, </font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">)</font>
+Merge: eccda2f 574bd03
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 15:12:39 2023 +0530
+
+    Merge pull request #1 from shubhampokar/testb
+    
+    Testb
+
+<font color="#A2734C">commit 574bd03e06948f4e91de9f8f022a7613c7495113 (</font><font color="#C01C28"><b>origin/testb</b></font><font color="#A2734C">)</font>
+Merge: e3667f6 eccda2f
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:06:01 2023 +0530
+
+    Merge branch &apos;main&apos; of https://github.com/shubhampokar/git_demo into testb
+
+<font color="#A2734C">commit e3667f6470b51d05488dac8e4591d509eebbbc6c</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:04:01 2023 +0530
+
+    456 created in testb branch
+
+<font color="#A2734C">commit eccda2f8a3456a0ceddfdc126a1207536daccff6</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:03:22 2023 +0530
+
+    123 created in main branch
+
+<font color="#A2734C">commit 80b48a1847b561aaf150512c4fba0ffeca3af3cc</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 14:54:27 2023 +0530
+
+    added 789 in testb branch
+
+<font color="#A2734C">commit 766bf42fcf77cdb6c9e3593f845841a755e57b6e</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:55:44 2023 +0530
+
+    both stash and current kept for text, acceted stash for remove
+
+<font color="#A2734C">commit 294a0af590660bb573ef3d1917cf7a57547f7fcb</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:51:02 2023 +0530
+
+    exp 2
+
+<font color="#A2734C">commit 34fa7fdbc9d7433b43bb3a13c99ca3267eae00e2</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:48:54 2023 +0530
+
+    remove.txt added
+
+<font color="#A2734C">commit 50fdf9869669b415a05cf9b4cb1771c79513b920</font>
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git merge main
+Updating 8cffd53..9a3ec60
+Fast-forward
+ mergemain | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 mergemain
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit 9a3ec60a0ad769056d579ff3245906d36f339a50 (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>testb</b></font><font color="#A2734C">, </font><font color="#26A269"><b>main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:22:25 2023 +0530
+
+    mergemain created in main
+
+<font color="#A2734C">commit 8cffd5393926e6e30bd2caf03d8f2cf917026be7 (</font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">)</font>
+Merge: eccda2f 574bd03
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 15:12:39 2023 +0530
+
+    Merge pull request #1 from shubhampokar/testb
+    
+    Testb
+
+<font color="#A2734C">commit 574bd03e06948f4e91de9f8f022a7613c7495113 (</font><font color="#C01C28"><b>origin/testb</b></font><font color="#A2734C">)</font>
+Merge: e3667f6 eccda2f
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:06:01 2023 +0530
+
+    Merge branch &apos;main&apos; of https://github.com/shubhampokar/git_demo into testb
+
+<font color="#A2734C">commit e3667f6470b51d05488dac8e4591d509eebbbc6c</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:04:01 2023 +0530
+
+    456 created in testb branch
+
+<font color="#A2734C">commit eccda2f8a3456a0ceddfdc126a1207536daccff6</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:03:22 2023 +0530
+
+    123 created in main branch
+
+<font color="#A2734C">commit 80b48a1847b561aaf150512c4fba0ffeca3af3cc</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 14:54:27 2023 +0530
+
+    added 789 in testb branch
+
+<font color="#A2734C">commit 766bf42fcf77cdb6c9e3593f845841a755e57b6e</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:55:44 2023 +0530
+
+    both stash and current kept for text, acceted stash for remove
+
+<font color="#A2734C">commit 294a0af590660bb573ef3d1917cf7a57547f7fcb</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:51:02 2023 +0530
+
+    exp 2
+
+<font color="#A2734C">commit 34fa7fdbc9d7433b43bb3a13c99ca3267eae00e2</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ touch mergetestb
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;mergetestb created in testb branch&quot;
+[testb d4a7190] mergetestb created in testb branch
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 mergetestb
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch testb
+nothing to commit, working tree clean
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout main
+Switched to branch &apos;main&apos;
+Your branch is ahead of &apos;origin/main&apos; by 1 commit.
+  (use &quot;git push&quot; to publish your local commits)
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git merge main
+Already up to date.
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git merge testb
+Updating 9a3ec60..d4a7190
+Fast-forward
+ mergetestb | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 mergetestb
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git merge main
+Already up to date.
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push origin main 
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 465 bytes | 465.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/shubhampokar/git_demo.git
+   8cffd53..d4a7190  main -&gt; main
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push origin testb 
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/shubhampokar/git_demo.git
+   574bd03..d4a7190  testb -&gt; testb
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout testb 
+Switched to branch &apos;testb&apos;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit --ammend
+error: unknown option `ammend&apos;
+usage: git commit [&lt;options&gt;] [--] &lt;pathspec&gt;...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file &lt;file&gt;     read message from file
+    --author &lt;author&gt;     override author for commit
+    --date &lt;date&gt;         override date for commit
+    -m, --message &lt;message&gt;
+                          commit message
+    -c, --reedit-message &lt;commit&gt;
+                          reuse and edit message from specified commit
+    -C, --reuse-message &lt;commit&gt;
+                          reuse message from specified commit
+    --fixup [(amend|reword):]commit
+                          use autosquash formatted message to fixup or amend/reword specified commit
+    --squash &lt;commit&gt;     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    --trailer &lt;trailer&gt;   add custom trailer(s)
+    -s, --signoff         add a Signed-off-by trailer
+    -t, --template &lt;file&gt;
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup &lt;mode&gt;      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=&lt;key-id&gt;]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=&lt;mode&gt;]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file &lt;file&gt;
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit --amend
+[testb 09a1100] mergetestb created in testb branch
+ Date: Thu Feb 2 15:28:07 2023 +0530
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 mergetestb
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit 09a110082d5c517e7b2149fffe40b871049eba56 (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>testb</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:28:07 2023 +0530
+
+    mergetestb created in testb branch
+
+<font color="#A2734C">commit 9a3ec60a0ad769056d579ff3245906d36f339a50</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:22:25 2023 +0530
+
+    mergemain created in main
+
+<font color="#A2734C">commit 8cffd5393926e6e30bd2caf03d8f2cf917026be7</font>
+Merge: eccda2f 574bd03
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 15:12:39 2023 +0530
+
+    Merge pull request #1 from shubhampokar/testb
+    
+    Testb
+
+<font color="#A2734C">commit 574bd03e06948f4e91de9f8f022a7613c7495113</font>
+Merge: e3667f6 eccda2f
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:06:01 2023 +0530
+
+    Merge branch &apos;main&apos; of https://github.com/shubhampokar/git_demo into testb
+
+<font color="#A2734C">commit e3667f6470b51d05488dac8e4591d509eebbbc6c</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:04:01 2023 +0530
+
+    456 created in testb branch
+
+<font color="#A2734C">commit eccda2f8a3456a0ceddfdc126a1207536daccff6</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:03:22 2023 +0530
+
+    123 created in main branch
+
+<font color="#A2734C">commit 80b48a1847b561aaf150512c4fba0ffeca3af3cc</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 14:54:27 2023 +0530
+
+    added 789 in testb branch
+
+<font color="#A2734C">commit 766bf42fcf77cdb6c9e3593f845841a755e57b6e</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:55:44 2023 +0530
+
+    both stash and current kept for text, acceted stash for remove
+
+<font color="#A2734C">commit 294a0af590660bb573ef3d1917cf7a57547f7fcb</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git rebase
+There is no tracking information for the current branch.
+Please specify which branch you want to rebase against.
+See git-rebase(1) for details.
+
+    git rebase &apos;&lt;branch&gt;&apos;
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=&lt;remote&gt;/&lt;branch&gt; testb
+
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit 09a110082d5c517e7b2149fffe40b871049eba56 (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>testb</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:28:07 2023 +0530
+
+    mergetestb created in testb branch
+
+<font color="#A2734C">commit 9a3ec60a0ad769056d579ff3245906d36f339a50</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:22:25 2023 +0530
+
+    mergemain created in main
+
+<font color="#A2734C">commit 8cffd5393926e6e30bd2caf03d8f2cf917026be7</font>
+Merge: eccda2f 574bd03
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 15:12:39 2023 +0530
+
+    Merge pull request #1 from shubhampokar/testb
+    
+    Testb
+
+<font color="#A2734C">commit 574bd03e06948f4e91de9f8f022a7613c7495113</font>
+Merge: e3667f6 eccda2f
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:06:01 2023 +0530
+
+    Merge branch &apos;main&apos; of https://github.com/shubhampokar/git_demo into testb
+
+<font color="#A2734C">commit e3667f6470b51d05488dac8e4591d509eebbbc6c</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:04:01 2023 +0530
+
+    456 created in testb branch
+
+<font color="#A2734C">commit eccda2f8a3456a0ceddfdc126a1207536daccff6</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:03:22 2023 +0530
+
+    123 created in main branch
+
+<font color="#A2734C">commit 80b48a1847b561aaf150512c4fba0ffeca3af3cc</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 14:54:27 2023 +0530
+
+    added 789 in testb branch
+
+<font color="#A2734C">commit 766bf42fcf77cdb6c9e3593f845841a755e57b6e</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:55:44 2023 +0530
+
+    both stash and current kept for text, acceted stash for remove
+
+<font color="#A2734C">commit 294a0af590660bb573ef3d1917cf7a57547f7fcb</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font color="#A2734C">commit 09a110082d5c517e7b2149fffe40b871049eba56 (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>testb</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:28:07 2023 +0530
+
+    mergetestb created in testb branch
+
+<font color="#A2734C">commit 9a3ec60a0ad769056d579ff3245906d36f339a50</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:22:25 2023 +0530
+
+    mergemain created in main
+
+<font color="#A2734C">commit 8cffd5393926e6e30bd2caf03d8f2cf917026be7</font>
+Merge: eccda2f 574bd03
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 15:12:39 2023 +0530
+
+    Merge pull request #1 from shubhampokar/testb
+    
+    Testb
+
+<font color="#A2734C">commit 574bd03e06948f4e91de9f8f022a7613c7495113</font>
+Merge: e3667f6 eccda2f
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:06:01 2023 +0530
+
+    Merge branch &apos;main&apos; of https://github.com/shubhampokar/git_demo into testb
+
+<font color="#A2734C">commit e3667f6470b51d05488dac8e4591d509eebbbc6c</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:04:01 2023 +0530
+
+    456 created in testb branch
+
+<font color="#A2734C">commit eccda2f8a3456a0ceddfdc126a1207536daccff6</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:03:22 2023 +0530
+
+    123 created in main branch
+
+<font color="#A2734C">commit 80b48a1847b561aaf150512c4fba0ffeca3af3cc</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 14:54:27 2023 +0530
+
+    added 789 in testb branch
+
+<font color="#A2734C">commit 766bf42fcf77cdb6c9e3593f845841a755e57b6e</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 13:55:44 2023 +0530
+
+    both stash and current kept for text, acceted stash for remove
+
+<font color="#A2734C">commit 294a0af590660bb573ef3d1917cf7a57547f7fcb</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git rebase i 8cffd5393926e6e30bd2caf03d8f2cf917026be7
+fatal: invalid upstream &apos;i&apos;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git rebase -i 8cffd5393926e6e30bd2caf03d8f2cf917026be7
+Successfully rebased and updated refs/heads/testb.
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout main
+Switched to branch &apos;main&apos;
+Your branch is up to date with &apos;origin/main&apos;.
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ touch newcommitmsg
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ touch newcommitmsg2
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ rm newcommitmsg2
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is up to date with &apos;origin/main&apos;.
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+	<font color="#C01C28">newcommitmsg</font>
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;added newcommitmsg file&quot;
+[main 153f97d] added newcommitmsg file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 newcommitmsg
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ touch newcommitmsg2
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is ahead of &apos;origin/main&apos; by 1 commit.
+  (use &quot;git push&quot; to publish your local commits)
+
+Changes to be committed:
+  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+	<font color="#26A269">new file:   newcommitmsg2</font>
+
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;added newcommitmsg2 file&quot;
+[main 7910322] added newcommitmsg2 file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 newcommitmsg2
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is ahead of &apos;origin/main&apos; by 2 commits.
+  (use &quot;git push&quot; to publish your local commits)
+
+nothing to commit, working tree clean
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push origin main
+Username for &apos;https://github.com&apos;: shubhampoka
+Password for &apos;https://shubhampoka@github.com&apos;: 
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push origin main
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+remote: Invalid username or password.
+fatal: Authentication failed for &apos;https://github.com/shubhampokar/git_demo.git/&apos;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push origin main
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 457 bytes | 457.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/shubhampokar/git_demo.git
+   d4a7190..7910322  main -&gt; main
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git status
+On branch main
+Your branch is up to date with &apos;origin/main&apos;.
+
+nothing to commit, working tree clean
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit --amend
+[main ce7f62e] added newcommitmsg2 file (msg changed using amend keyword)
+ Date: Thu Feb 2 15:53:30 2023 +0530
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 newcommitmsg2
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit ce7f62ee1b459328801bc6733bfc3561c27f0a24 (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:53:30 2023 +0530
+
+    added newcommitmsg2 file (msg changed using amend keyword)
+
+<font color="#A2734C">commit 153f97db3130b2bf6d69e83c01c08f757c893f6d</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:53:16 2023 +0530
+
+    added newcommitmsg file
+
+<font color="#A2734C">commit d4a7190bce2d737bd545fb26df7bcef8d19ece62 (</font><font color="#C01C28"><b>origin/testb</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:28:07 2023 +0530
+
+    mergetestb created in testb branch
+
+<font color="#A2734C">commit 9a3ec60a0ad769056d579ff3245906d36f339a50</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:22:25 2023 +0530
+
+    mergemain created in main
+
+<font color="#A2734C">commit 8cffd5393926e6e30bd2caf03d8f2cf917026be7</font>
+Merge: eccda2f 574bd03
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 15:12:39 2023 +0530
+
+    Merge pull request #1 from shubhampokar/testb
+    
+    Testb
+
+<font color="#A2734C">commit 574bd03e06948f4e91de9f8f022a7613c7495113</font>
+Merge: e3667f6 eccda2f
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:06:01 2023 +0530
+
+    Merge branch &apos;main&apos; of https://github.com/shubhampokar/git_demo into testb
+
+<font color="#A2734C">commit e3667f6470b51d05488dac8e4591d509eebbbc6c</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:04:01 2023 +0530
+
+    456 created in testb branch
+
+<font color="#A2734C">commit eccda2f8a3456a0ceddfdc126a1207536daccff6</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:03:22 2023 +0530
+
+    123 created in main branch
+
+<font color="#A2734C">commit 80b48a1847b561aaf150512c4fba0ffeca3af3cc</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push --force origin main
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 287 bytes | 287.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/shubhampokar/git_demo.git
+ + 7910322...ce7f62e main -&gt; main (forced update)
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ ^C
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git rebase -i d4a7190bce2d737bd545fb26df7bcef8d19ece62
+[detached HEAD 5a9df27] added newcommitmsg file
+ Date: Thu Feb 2 15:53:16 2023 +0530
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 newcommitmsg
+Successfully rebased and updated refs/heads/main.
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit 626f2731ad79ac13c758be5c1f0df6c7fb5c87eb (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:53:30 2023 +0530
+
+    added newcommitmsg2 file (msg changed using amend keyword)
+
+<font color="#A2734C">commit 5a9df278f9825f0fb235bf051346e6b437c38ae8</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:53:16 2023 +0530
+
+    added newcommitmsg file
+
+<font color="#A2734C">commit d4a7190bce2d737bd545fb26df7bcef8d19ece62 (</font><font color="#C01C28"><b>origin/testb</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:28:07 2023 +0530
+
+    mergetestb created in testb branch
+
+<font color="#A2734C">commit 9a3ec60a0ad769056d579ff3245906d36f339a50</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:22:25 2023 +0530
+
+    mergemain created in main
+
+<font color="#A2734C">commit 8cffd5393926e6e30bd2caf03d8f2cf917026be7</font>
+Merge: eccda2f 574bd03
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 15:12:39 2023 +0530
+
+    Merge pull request #1 from shubhampokar/testb
+    
+    Testb
+
+<font color="#A2734C">commit 574bd03e06948f4e91de9f8f022a7613c7495113</font>
+Merge: e3667f6 eccda2f
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:06:01 2023 +0530
+
+    Merge branch &apos;main&apos; of https://github.com/shubhampokar/git_demo into testb
+
+<font color="#A2734C">commit e3667f6470b51d05488dac8e4591d509eebbbc6c</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:04:01 2023 +0530
+
+    456 created in testb branch
+
+<font color="#A2734C">commit eccda2f8a3456a0ceddfdc126a1207536daccff6</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:03:22 2023 +0530
+
+    123 created in main branch
+
+<font color="#A2734C">commit 80b48a1847b561aaf150512c4fba0ffeca3af3cc</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git rebase -i d4a7190bce2d737bd545fb26df7bcef8d19ece62
+[detached HEAD 76f63a9] added newcommitmsg file (changed using rebase)
+ Date: Thu Feb 2 15:53:16 2023 +0530
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 newcommitmsg
+Successfully rebased and updated refs/heads/main.
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit ef5326d738e5dbfab811050d7f73a80995097c64 (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:53:30 2023 +0530
+
+    added newcommitmsg2 file (msg changed using amend keyword)
+
+<font color="#A2734C">commit 76f63a96295da7911af041982f42e054b5ec7fd6</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:53:16 2023 +0530
+
+    added newcommitmsg file (changed using rebase)
+
+<font color="#A2734C">commit d4a7190bce2d737bd545fb26df7bcef8d19ece62 (</font><font color="#C01C28"><b>origin/testb</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:28:07 2023 +0530
+
+    mergetestb created in testb branch
+
+<font color="#A2734C">commit 9a3ec60a0ad769056d579ff3245906d36f339a50</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:22:25 2023 +0530
+
+    mergemain created in main
+
+<font color="#A2734C">commit 8cffd5393926e6e30bd2caf03d8f2cf917026be7</font>
+Merge: eccda2f 574bd03
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 15:12:39 2023 +0530
+
+    Merge pull request #1 from shubhampokar/testb
+    
+    Testb
+
+<font color="#A2734C">commit 574bd03e06948f4e91de9f8f022a7613c7495113</font>
+Merge: e3667f6 eccda2f
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:06:01 2023 +0530
+
+    Merge branch &apos;main&apos; of https://github.com/shubhampokar/git_demo into testb
+
+<font color="#A2734C">commit e3667f6470b51d05488dac8e4591d509eebbbc6c</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:04:01 2023 +0530
+
+    456 created in testb branch
+
+<font color="#A2734C">commit eccda2f8a3456a0ceddfdc126a1207536daccff6</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:03:22 2023 +0530
+
+    123 created in main branch
+
+<font color="#A2734C">commit 80b48a1847b561aaf150512c4fba0ffeca3af3cc</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push --force origin main
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+remote: Invalid username or password.
+fatal: Authentication failed for &apos;https://github.com/shubhampokar/git_demo.git/&apos;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push --force origin main
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 510 bytes | 510.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/shubhampokar/git_demo.git
+ + ce7f62e...ef5326d main -&gt; main (forced update)
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git branch
+* <font color="#26A269">main</font>
+  testb
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git branch cheryb
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git branch
+  cheryb
+* <font color="#26A269">main</font>
+  testb
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout cheryb 
+Switched to branch &apos;cheryb&apos;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ touch c1
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;c1 in cherryb&quot;
+[cheryb fc0a8d1] c1 in cherryb
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 c1
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ touch c2
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;c2 in cherryb&quot;
+[cheryb 19dcae9] c2 in cherryb
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 c2
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ touch c3
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;c3 in cherryb&quot;
+[cheryb 4dd4583] c3 in cherryb
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 c3
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ ls
+1    2    789  c2  gituhb_file.txt  mergetestb    newcommitmsg2  private.txt  remove.txt
+123  456  c1   c3  mergemain        newcommitmsg  new.txt        README.md    test.txt
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ nano test.txt 
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git add .
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git commit -m &quot;changed test in cherryb&quot;
+[cheryb 695c282] changed test in cherryb
+ 1 file changed, 1 insertion(+)
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git branch
+* <font color="#26A269">cheryb</font>
+  main
+  testb
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout main
+Switched to branch &apos;main&apos;
+Your branch is up to date with &apos;origin/main&apos;.
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout cheryb 
+Switched to branch &apos;cheryb&apos;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit 695c28214db75ba754a4831541955432eb6695d5 (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>cheryb</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 16:34:05 2023 +0530
+
+    changed test in cherryb
+
+<font color="#A2734C">commit 4dd4583cb951e50976954af0ca457c0c9b41634a</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 16:31:33 2023 +0530
+
+    c3 in cherryb
+
+<font color="#A2734C">commit 19dcae9a8b6bbce1aab0fa19a15d59508ca529d5</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 16:31:11 2023 +0530
+
+    c2 in cherryb
+
+<font color="#A2734C">commit fc0a8d1b6a87d0aecda6db149ab77b3ae370e3f5</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 16:31:01 2023 +0530
+
+    c1 in cherryb
+
+<font color="#A2734C">commit ef5326d738e5dbfab811050d7f73a80995097c64 (</font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">, </font><font color="#26A269"><b>main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:53:30 2023 +0530
+
+    added newcommitmsg2 file (msg changed using amend keyword)
+
+<font color="#A2734C">commit 76f63a96295da7911af041982f42e054b5ec7fd6</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:53:16 2023 +0530
+
+    added newcommitmsg file (changed using rebase)
+
+<font color="#A2734C">commit d4a7190bce2d737bd545fb26df7bcef8d19ece62 (</font><font color="#C01C28"><b>origin/testb</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:28:07 2023 +0530
+
+    mergetestb created in testb branch
+
+<font color="#A2734C">commit 9a3ec60a0ad769056d579ff3245906d36f339a50</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:22:25 2023 +0530
+
+    mergemain created in main
+
+<font color="#A2734C">commit 8cffd5393926e6e30bd2caf03d8f2cf917026be7</font>
+Merge: eccda2f 574bd03
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 15:12:39 2023 +0530
+
+    Merge pull request #1 from shubhampokar/testb
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ 
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout main
+Switched to branch &apos;main&apos;
+Your branch is up to date with &apos;origin/main&apos;.
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit ef5326d738e5dbfab811050d7f73a80995097c64 (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>main</b></font><font color="#A2734C">, </font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:53:30 2023 +0530
+
+    added newcommitmsg2 file (msg changed using amend keyword)
+
+<font color="#A2734C">commit 76f63a96295da7911af041982f42e054b5ec7fd6</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:53:16 2023 +0530
+
+    added newcommitmsg file (changed using rebase)
+
+<font color="#A2734C">commit d4a7190bce2d737bd545fb26df7bcef8d19ece62 (</font><font color="#C01C28"><b>origin/testb</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:28:07 2023 +0530
+
+    mergetestb created in testb branch
+
+<font color="#A2734C">commit 9a3ec60a0ad769056d579ff3245906d36f339a50</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:22:25 2023 +0530
+
+    mergemain created in main
+
+<font color="#A2734C">commit 8cffd5393926e6e30bd2caf03d8f2cf917026be7</font>
+Merge: eccda2f 574bd03
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 15:12:39 2023 +0530
+
+    Merge pull request #1 from shubhampokar/testb
+    
+    Testb
+
+<font color="#A2734C">commit 574bd03e06948f4e91de9f8f022a7613c7495113</font>
+Merge: e3667f6 eccda2f
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:06:01 2023 +0530
+
+    Merge branch &apos;main&apos; of https://github.com/shubhampokar/git_demo into testb
+
+<font color="#A2734C">commit e3667f6470b51d05488dac8e4591d509eebbbc6c</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:04:01 2023 +0530
+
+    456 created in testb branch
+
+<font color="#A2734C">commit eccda2f8a3456a0ceddfdc126a1207536daccff6</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:03:22 2023 +0530
+
+    123 created in main branch
+
+<font color="#A2734C">commit 80b48a1847b561aaf150512c4fba0ffeca3af3cc</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git branch
+  cheryb
+* <font color="#26A269">main</font>
+  testb
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout cheryb 
+Switched to branch &apos;cheryb&apos;
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit 695c28214db75ba754a4831541955432eb6695d5 (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>cheryb</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 16:34:05 2023 +0530
+
+    changed test in cherryb
+
+<font color="#A2734C">commit 4dd4583cb951e50976954af0ca457c0c9b41634a</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 16:31:33 2023 +0530
+
+    c3 in cherryb
+
+<font color="#A2734C">commit 19dcae9a8b6bbce1aab0fa19a15d59508ca529d5</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 16:31:11 2023 +0530
+
+    c2 in cherryb
+
+<font color="#A2734C">commit fc0a8d1b6a87d0aecda6db149ab77b3ae370e3f5</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 16:31:01 2023 +0530
+
+    c1 in cherryb
+
+<font color="#A2734C">commit ef5326d738e5dbfab811050d7f73a80995097c64 (</font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">, </font><font color="#26A269"><b>main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:53:30 2023 +0530
+
+    added newcommitmsg2 file (msg changed using amend keyword)
+
+<font color="#A2734C">commit 76f63a96295da7911af041982f42e054b5ec7fd6</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:53:16 2023 +0530
+
+    added newcommitmsg file (changed using rebase)
+
+<font color="#A2734C">commit d4a7190bce2d737bd545fb26df7bcef8d19ece62 (</font><font color="#C01C28"><b>origin/testb</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:28:07 2023 +0530
+
+    mergetestb created in testb branch
+
+<font color="#A2734C">commit 9a3ec60a0ad769056d579ff3245906d36f339a50</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:22:25 2023 +0530
+
+    mergemain created in main
+
+<font color="#A2734C">commit 8cffd5393926e6e30bd2caf03d8f2cf917026be7</font>
+Merge: eccda2f 574bd03
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 15:12:39 2023 +0530
+
+    Merge pull request #1 from shubhampokar/testb
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git checkout main
+Switched to branch &apos;main&apos;
+Your branch is up to date with &apos;origin/main&apos;.
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git cherry-pick 19dcae9a8b6bbce1aab0fa19a15d59508ca529d5
+[main 05569fc] c2 in cherryb
+ Date: Thu Feb 2 16:31:11 2023 +0530
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 c2
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git cherry-pick 695c28214db75ba754a4831541955432eb6695d5
+[main a1b0cad] changed test in cherryb
+ Date: Thu Feb 2 16:34:05 2023 +0530
+ 1 file changed, 1 insertion(+)
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git cherry-pick 4dd4583cb951e50976954af0ca457c0c9b41634a
+[main c53041e] c3 in cherryb
+ Date: Thu Feb 2 16:31:33 2023 +0530
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 c3
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git log
+<font color="#A2734C">commit c53041edf64a49c7f004d5f3be389ebb55c12080 (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 16:31:33 2023 +0530
+
+    c3 in cherryb
+
+<font color="#A2734C">commit a1b0cad8996fdec0c1065aa50a75fb03ef3d0df7</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 16:34:05 2023 +0530
+
+    changed test in cherryb
+
+<font color="#A2734C">commit 05569fc44b4696566a656951457666f4beda959f</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 16:31:11 2023 +0530
+
+    c2 in cherryb
+
+<font color="#A2734C">commit ef5326d738e5dbfab811050d7f73a80995097c64 (</font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:53:30 2023 +0530
+
+    added newcommitmsg2 file (msg changed using amend keyword)
+
+<font color="#A2734C">commit 76f63a96295da7911af041982f42e054b5ec7fd6</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:53:16 2023 +0530
+
+    added newcommitmsg file (changed using rebase)
+
+<font color="#A2734C">commit d4a7190bce2d737bd545fb26df7bcef8d19ece62 (</font><font color="#C01C28"><b>origin/testb</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:28:07 2023 +0530
+
+    mergetestb created in testb branch
+
+<font color="#A2734C">commit 9a3ec60a0ad769056d579ff3245906d36f339a50</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:22:25 2023 +0530
+
+    mergemain created in main
+
+<font color="#A2734C">commit 8cffd5393926e6e30bd2caf03d8f2cf917026be7</font>
+Merge: eccda2f 574bd03
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 15:12:39 2023 +0530
+
+    Merge pull request #1 from shubhampokar/testb
+    
+    Testb
+
+<font color="#A2734C">commit 574bd03e06948f4e91de9f8f022a7613c7495113</font>
+Merge: e3667f6 eccda2f
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font color="#A2734C">commit c53041edf64a49c7f004d5f3be389ebb55c12080 (</font><font color="#2AA1B3"><b>HEAD -&gt; </b></font><font color="#26A269"><b>main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 16:31:33 2023 +0530
+
+    c3 in cherryb
+
+<font color="#A2734C">commit a1b0cad8996fdec0c1065aa50a75fb03ef3d0df7</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 16:34:05 2023 +0530
+
+    changed test in cherryb
+
+<font color="#A2734C">commit 05569fc44b4696566a656951457666f4beda959f</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 16:31:11 2023 +0530
+
+    c2 in cherryb
+
+<font color="#A2734C">commit ef5326d738e5dbfab811050d7f73a80995097c64 (</font><font color="#C01C28"><b>origin/main</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:53:30 2023 +0530
+
+    added newcommitmsg2 file (msg changed using amend keyword)
+
+<font color="#A2734C">commit 76f63a96295da7911af041982f42e054b5ec7fd6</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:53:16 2023 +0530
+
+    added newcommitmsg file (changed using rebase)
+
+<font color="#A2734C">commit d4a7190bce2d737bd545fb26df7bcef8d19ece62 (</font><font color="#C01C28"><b>origin/testb</b></font><font color="#A2734C">)</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:28:07 2023 +0530
+
+    mergetestb created in testb branch
+
+<font color="#A2734C">commit 9a3ec60a0ad769056d579ff3245906d36f339a50</font>
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+Date:   Thu Feb 2 15:22:25 2023 +0530
+
+    mergemain created in main
+
+<font color="#A2734C">commit 8cffd5393926e6e30bd2caf03d8f2cf917026be7</font>
+Merge: eccda2f 574bd03
+Author: shubhampokar &lt;124237033+shubhampokar@users.noreply.github.com&gt;
+Date:   Thu Feb 2 15:12:39 2023 +0530
+
+    Merge pull request #1 from shubhampokar/testb
+    
+    Testb
+
+<font color="#A2734C">commit 574bd03e06948f4e91de9f8f022a7613c7495113</font>
+Merge: e3667f6 eccda2f
+Author: Shubham Pokar &lt;shubham.p@simformsolutions.com&gt;
+
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git rebase -i ef5326d738e5dbfab811050d7f73a80995097c64
+Successfully rebased and updated refs/heads/main.
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ git push origin cheryb 
+Username for &apos;https://github.com&apos;: shubhampokar
+Password for &apos;https://shubhampokar@github.com&apos;: 
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 971 bytes | 485.00 KiB/s, done.
+Total 9 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 1 local object.
+remote: 
+remote: Create a pull request for &apos;cheryb&apos; on GitHub by visiting:
+remote:      https://github.com/shubhampokar/git_demo/pull/new/cheryb
+remote: 
+To https://github.com/shubhampokar/git_demo.git
+ * [new branch]      cheryb -&gt; cheryb
+<font color="#26A269"><b>shubham@sf-cpu-313</b></font>:<font color="#12488B"><b>~/git_demo</b></font>$ 
+
+</pre>
